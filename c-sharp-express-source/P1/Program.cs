@@ -6,7 +6,7 @@ namespace P1
     {
         static void Main()
         {
-            Console.WriteLine("Welcome to C# Express Course solution and P1 application");
+            Console.WriteLine("Welcome to C# Express Course 🚀 solution and P1 application");
 
             Console.WriteLine("This is a very simple C# console app");
 
