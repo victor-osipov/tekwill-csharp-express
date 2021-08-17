@@ -13,6 +13,7 @@ namespace P1
             Console.WriteLine("Let's display current system date time");
 
             Console.WriteLine(DateTime.Now);
+
         }
     }
 }
