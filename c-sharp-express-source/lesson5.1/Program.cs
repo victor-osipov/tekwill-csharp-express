@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 
+using lesson5._1.Model;
 using lesson5._1.Services;
 
 namespace lesson5._1
@@ -8,6 +10,8 @@ namespace lesson5._1
     {
         static void Main(string[] args)
         {
+            //TestBox();
+
             var service = new StudentService();
 
             for (; ; )
@@ -17,24 +21,19 @@ namespace lesson5._1
                 switch (input)
                 {
                     case "1":
-                        {
-                            service.AddNewStudent();
-                        }
+                        service.AddNewStudent();
                         break;
 
                     case "2":
-                        {
-                            service.PrintAllStudents();
-                        }
+                        service.PrintAllStudents();
                         break;
 
                     case "3":
-                        {
-                            service.RemoveStudentByName();
-                        }
+                        service.RemoveStudentByName();
                         break;
 
                     case "4":
+                        service.WriteStudentsToFile();
                         break;
 
                     default:
@@ -45,6 +44,17 @@ namespace lesson5._1
             Console.WriteLine("Done! Terminating");
         }
 
+        private static void TestBox()
+        {
+            var listBox = new List<IBox>();
+
+            var b1 = new RedBox();
+
+            var b2 = new GreenBox();
+
+            listBox.Add(b1);
+            listBox.Add(b2);
+        }
 
         private static string PrintMenuAndRead()
         {
@@ -52,7 +62,7 @@ namespace lesson5._1
             Console.WriteLine("1 - add new student");
             Console.WriteLine("2 - print all student to console");
             Console.WriteLine("3 - remove user by name");
-            Console.WriteLine("4 - exit");
+            Console.WriteLine("4 - write all to file!");
             var input = Console.ReadLine();
             return input;
         }

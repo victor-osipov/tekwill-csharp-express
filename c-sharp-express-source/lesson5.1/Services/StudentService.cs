@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 using lesson5._1.Model;
 
@@ -11,8 +12,9 @@ namespace lesson5._1.Services
     ///     print all students to console;
     ///     add new student;
     ///     remove student;
+    ///     write all student to file on disk;
     /// </summary>
-    public class StudentService
+    public class StudentService : IStudentService
     {
         private List<Student> list = new List<Student>();
 
@@ -64,5 +66,19 @@ namespace lesson5._1.Services
             list.Remove(s1);
         }
 
+        public void WriteStudentsToFile()
+        {
+            var fileName = "students.txt";
+
+            var lines = new List<string>();
+
+            foreach (var stud in list)
+            {
+                var name = stud.GetFullName();
+                lines.Add(name);
+            }
+
+            File.WriteAllLines(fileName, lines);
+        }
     }
 }
