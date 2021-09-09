@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 
-using lesson5._1.Model;
 using lesson5._1.Services;
 
 namespace lesson5._1
@@ -10,9 +8,7 @@ namespace lesson5._1
     {
         static void Main(string[] args)
         {
-            //TestBox();
-
-            var service = new StudentService();
+            IStudentService service = new FileStudentService();
 
             for (; ; )
             {
@@ -44,17 +40,6 @@ namespace lesson5._1
             Console.WriteLine("Done! Terminating");
         }
 
-        private static void TestBox()
-        {
-            var listBox = new List<IBox>();
-
-            var b1 = new RedBox();
-
-            var b2 = new GreenBox();
-
-            listBox.Add(b1);
-            listBox.Add(b2);
-        }
 
         private static string PrintMenuAndRead()
         {

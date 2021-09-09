@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace lesson5._1.Services
+﻿namespace lesson5._1.Services
 {
     /// <summary>
-    /// 
+    /// our common interface for any student services
     /// </summary>
     public interface IStudentService
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-using lesson5._1.Model;
+using Students.Domain.Entity;
 
 namespace lesson5._1.Services
 {
@@ -14,19 +14,26 @@ namespace lesson5._1.Services
     ///     remove student;
     ///     write all student to file on disk;
     /// </summary>
-    public class StudentService : IStudentService
+    public class FileStudentService : IStudentService
     {
         private List<Student> list = new List<Student>();
 
-        public StudentService()
+        //todo
+        // add student's repository and work with it
+
+        public FileStudentService()
         {
         }
 
         public void PrintAllStudents()
         {
-            foreach (var student in list)
+            var fileName = "students.txt";
+
+            var linesFromFile = File.ReadAllLines(fileName);
+
+            foreach (var name in linesFromFile)
             {
-                Console.WriteLine(student.GetFullName());
+                Console.WriteLine(name);
             }
         }
 
@@ -42,7 +49,8 @@ namespace lesson5._1.Services
             {
                 FirstName = firstName,
                 LastName = lastName,
-                Registered = DateTime.Now
+                BirthDay = DateTime.Now,
+                Id = default
             };
 
             list.Add(student1);
