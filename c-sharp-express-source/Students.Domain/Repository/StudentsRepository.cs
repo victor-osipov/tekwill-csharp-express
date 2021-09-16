@@ -28,15 +28,22 @@ namespace Students.Domain.Repository
             this.fileName = fileName;
         }
 
+        /// <summary>
+        /// add the student to the collection,
+        /// in this case to the text file on disk
+        /// </summary>
         public void AddStudent(Student stud)
         {
             // serialize Student into JSON text (string)
             var studentJson = JsonConvert.SerializeObject(stud);
 
-            File.AppendAllText(fileName, studentJson);
-            File.AppendAllText(fileName, "\n");
+            File.AppendAllText(fileName, studentJson + "\n");
         }
 
+        /// <summary>
+        /// read all students from file
+        /// and return a collection of them
+        /// </summary>
         public List<Student> GetAllStudents()
         {
             var lines = File.ReadAllLines(fileName);
