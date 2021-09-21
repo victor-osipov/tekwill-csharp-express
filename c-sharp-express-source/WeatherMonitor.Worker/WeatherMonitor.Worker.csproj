@@ -9,7 +9,6 @@
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Domain\" />
+    <ProjectReference Include="..\WeatherMonitor.Domain\WeatherMonitor.Domain.csproj" />
   </ItemGroup>
 </Project>

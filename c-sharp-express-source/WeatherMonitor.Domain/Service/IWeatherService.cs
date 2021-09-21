@@ -1,9 +1,18 @@
 ﻿using System;
 
-using WeatherMonitor.Worker.Domain;
+using WeatherMonitor.Domain.Model;
 
-namespace WeatherMonitor.Worker.Services
+namespace WeatherMonitor.Domain.Service
 {
+    /// <summary>
+    /// Weather Service interface
+    /// </summary>
+    public interface IWeatherService
+    {
+        WeatherInfo GetCurrentWeather();
+    }
+
+
     public class FakeWeatherService : IWeatherService
     {
         public FakeWeatherService()
@@ -16,8 +25,8 @@ namespace WeatherMonitor.Worker.Services
 
             var fake = new WeatherInfo
             {
-                Location = "fake",
-                Temperature = random.NextDouble() * 100
+                location = "fake",
+                temperature = random.NextDouble() * 100
             };
 
             return fake;

@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students.Console3", "Studen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherMonitor.Worker", "WeatherMonitor.Worker\WeatherMonitor.Worker.csproj", "{DFDA5F5E-30BB-4BCC-8B60-D8712B3739A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherMonitor.API", "WeatherMonitor.API\WeatherMonitor.API.csproj", "{8A313EBA-E925-4BA4-9FBB-B495ACB106F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherMonitor.Domain", "WeatherMonitor.Domain\WeatherMonitor.Domain.csproj", "{2EC08369-88A0-459C-994F-6A4BDB1B1A30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{DFDA5F5E-30BB-4BCC-8B60-D8712B3739A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFDA5F5E-30BB-4BCC-8B60-D8712B3739A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFDA5F5E-30BB-4BCC-8B60-D8712B3739A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A313EBA-E925-4BA4-9FBB-B495ACB106F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A313EBA-E925-4BA4-9FBB-B495ACB106F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A313EBA-E925-4BA4-9FBB-B495ACB106F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A313EBA-E925-4BA4-9FBB-B495ACB106F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EC08369-88A0-459C-994F-6A4BDB1B1A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EC08369-88A0-459C-994F-6A4BDB1B1A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EC08369-88A0-459C-994F-6A4BDB1B1A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EC08369-88A0-459C-994F-6A4BDB1B1A30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

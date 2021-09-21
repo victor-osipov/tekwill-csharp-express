@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-using WeatherMonitor.Worker.Services;
+using WeatherMonitor.Domain.Service;
 
 namespace WeatherMonitor.Worker
 {
@@ -23,7 +23,8 @@ namespace WeatherMonitor.Worker
                 {
                     services.AddHostedService<WeatherWorker>();
 
-                    services.AddTransient<IWeatherService, FakeWeatherService>();
+                    //services.AddTransient<IWeatherService, FakeWeatherService>();
+                    services.AddTransient<IWeatherService, RealWeatherService>();
 
                     // add more services...
 

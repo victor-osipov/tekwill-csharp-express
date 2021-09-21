@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-using WeatherMonitor.Worker.Services;
+using WeatherMonitor.Domain.Service;
 
 namespace WeatherMonitor.Worker
 {
@@ -48,16 +48,14 @@ namespace WeatherMonitor.Worker
 
                 var weather = weatherService.GetCurrentWeather();
 
-                Console.WriteLine($"Weather: T={weather.Temperature}, L={weather.Location}");
+                Console.WriteLine($"Weather: T={weather.temperature}, L={weather.location}");
 
-                if (weather.Temperature > 30)
+                if (weather.temperature > 30)
                 {
                     Console.WriteLine("Alert! Too hot..");
-                    // ..
-                    //
                 }
 
-                await Task.Delay(TimeSpan.FromSeconds(3));
+                await Task.Delay(TimeSpan.FromSeconds(2));
             }
         }
     }

@@ -1,5 +1,5 @@
 ﻿using System;
-namespace WeatherMonitor.Worker.Domain
+namespace WeatherMonitor.Domain.Model
 {
     /// <summary>
     /// Weather Info:
@@ -9,8 +9,8 @@ namespace WeatherMonitor.Worker.Domain
     /// </summary>
     public class WeatherInfo
     {
-        public double Temperature { get; set; }
+        public double temperature { get; set; }
 
-        public string Location { get; set; }
+        public string location { get; set; }
     }
 }
