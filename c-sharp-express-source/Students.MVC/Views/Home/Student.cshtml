@@ -1,0 +1,20 @@
+﻿@model Students.Domain.Entity.Student
+
+@{
+    ViewData["Title"] = "Student's Details Page";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>Id</h3>
+<h4>@Model.Id</h4>
+
+<h3>First Name</h3>
+<h4>@Model.FirstName</h4>
+
+<h3>Last Name</h3>
+<h4>@Model.LastName</h4>
+
+<h3>Birth day</h3>
+<h4>@Model.BirthDay.ToString()</h4>
+

@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherMonitor.API", "Weath
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherMonitor.Domain", "WeatherMonitor.Domain\WeatherMonitor.Domain.csproj", "{2EC08369-88A0-459C-994F-6A4BDB1B1A30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students.MVC", "Students.MVC\Students.MVC.csproj", "{BFA37AAA-6F91-448B-813E-34A27156AE9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{2EC08369-88A0-459C-994F-6A4BDB1B1A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EC08369-88A0-459C-994F-6A4BDB1B1A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EC08369-88A0-459C-994F-6A4BDB1B1A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFA37AAA-6F91-448B-813E-34A27156AE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA37AAA-6F91-448B-813E-34A27156AE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA37AAA-6F91-448B-813E-34A27156AE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA37AAA-6F91-448B-813E-34A27156AE9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
